@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arts Society - Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+ <div class="header">
+    <div class="header-content">
+        <img src="logo.png" alt="Arts Society Logo" class="logo">
+        <div>
+            <h1>NIIT Arts Society Registration</h1>
+            <p class="subtitle">Join our creative community today!</p>
+        </div>
+    </div>
+</div>
+        <div class="info-banner">
+            <p>Fill out this form to become a member of the Arts Society and participate in our exciting events, workshops, and exhibitions.</p>
+        </div>
+
+        <!-- REPLACE 'YOUR_FORM_ID' with your actual Formspree form ID -->
+        <form action="https://formspree.io/f/xyznqelk" method="POST" class="registration-form">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Student ID Field -->
+            <div class="form-group">
+                <label for="student-id">Student ID <span class="required">*</span></label>
+                <input type="text" id="student-id" name="student-id" placeholder="Enter your student ID" required>
+            </div>
+
+            <!-- Department Field -->
+            <div class="form-group">
+                <label for="department">Department <span class="required">*</span></label>
+                <select id="department" name="department" required>
+                    <option value="">Select your department</option>
+                    <option value="AI">Artificial Intelligence (AI)</option>
+                    <option value="CS">Computer Science (CS)</option>
+                    <option value="CY">Cyber Security (CY)</option>
+                    <option value="SE">Software Engineering (SE)</option>
+                </select>
+            </div>
+
+            <!-- Year Field -->
+            <div class="form-group">
+                <label for="year">Year of Study <span class="required">*</span></label>
+                <select id="year" name="year" required>
+                    <option value="">Select your year</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                    <option value="4th Year">4th Year</option>
+                </select>
+            </div>
+
+            <!-- Semester Field -->
+            <div class="form-group">
+                <label for="semester">Semester <span class="required">*</span></label>
+                <select id="semester" name="semester" required>
+                    <option value="">Select semester</option>
+                    <option value="Fall">Fall</option>
+                    <option value="Spring">Spring</option>
+                </select>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <!-- WhatsApp Number Field -->
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp Number <span class="required">*</span></label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="+92 300 1234567" required>
+            </div>
+
+            <!-- Interests Checkboxes -->
+            <div class="form-group">
+                <label class="section-label">Select Your Interests <span class="required">*</span></label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="painting" name="interests" value="Painting & Drawing">
+                        <label for="painting">Painting & Drawing</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="photography" name="interests" value="Photography">
+                        <label for="photography">Photography</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="sculpture" name="interests" value="Sculpture">
+                        <label for="sculpture">Sculpture</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="digital-art" name="interests" value="Digital Art">
+                        <label for="digital-art">Digital Art & Graphic Design</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="crafts" name="interests" value="Crafts & DIY">
+                        <label for="crafts">Crafts & DIY</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="calligraphy" name="interests" value="Calligraphy">
+                        <label for="calligraphy">Calligraphy</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="performing" name="interests" value="Performing Arts">
+                        <label for="performing">Performing Arts</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="music" name="interests" value="Music & Instruments">
+                        <label for="music">Music & Instruments</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Previous Experience Textarea -->
+            <div class="form-group">
+                <label for="experience">Tell us about your Previous Art Experience</label>
+                <textarea id="experience" name="experience" rows="5" placeholder="Share any previous art experience, skills, or projects you've worked on..."></textarea>
+            </div>
+
+            <!-- Why Join Textarea -->
+            <div class="form-group">
+                <label for="motivation">Why do you want to join the Arts Society? <span class="required">*</span></label>
+                <textarea id="motivation" name="motivation" rows="5" placeholder="Tell us what motivates you to join and what you hope to achieve..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">
+                <span>Submit Application</span>
+            </button>
+
+        </form>
+
+        <div class="footer-note">
+            <p>All fields marked with <span class="required">*</span> are required</p>
+        </div>
+    </div>
+
+</body>
+</html>
