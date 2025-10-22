@@ -1,8 +1,8 @@
 :root {
-  --primary: #000000;
-  --secondary: #FFFFFF;
-  --accent: #FF5E5B;
-  --shadow: 8px 8px 0px var(--primary);
+  --primary: #000000;        /* Black for text and borders */
+  --secondary: #A8C5E3;      /* Soft blue background */
+  --accent: #A13D3D;         /* Deep red */
+  --shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
 }
 
 * {
@@ -13,12 +13,13 @@
 }
 
 body {
-  background-color: var(--secondary);
+  background-color: #A8C5E3;  /* Soft blue */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  color: #000000;  /* Black text */
 }
 
 .container {
@@ -26,7 +27,7 @@ body {
   max-width: 600px;
   border: 1px solid var(--primary);
   padding: 40px 30px;
-  background-color: var(--secondary);
+  background-color: #B8D5F0;  /* Slightly lighter soft blue for container */
   box-shadow: var(--shadow);
   position: relative;
   border-radius: 12px;
@@ -42,6 +43,18 @@ body {
   border: 1px solid var(--primary);
   z-index: -1;
   border-radius: 12px;
+}
+
+.logo {
+  width: 288px;
+  height: 288px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;  /* Remove white background */
+  border: none;  /* Remove any border */
+  object-fit: contain;  /* Keep aspect ratio */
 }
 
 .header {
@@ -66,12 +79,12 @@ body {
   border: 1px solid var(--primary);
   padding: 20px;
   margin-bottom: 25px;
-  background-color: var(--secondary);
+  background-color: rgba(255, 255, 255, 0.4);  /* Light semi-transparent white */
   border-radius: 12px;
 }
 
 .info-banner p {
-  color: var(--primary);
+  color: #000000;  /* Black text */
   line-height: 1.6;
   font-size: 14px;
 }
@@ -92,6 +105,7 @@ body {
 .form-group label.section-label {
   font-size: 16px;
   margin-bottom: 12px;
+  color: var(--primary);
 }
 
 .required {
@@ -106,8 +120,9 @@ select,
 textarea {
   width: 100%;
   padding: 12px 15px;
-  border: 2px solid var(--primary);
-  background-color: var(--secondary);
+  border: 2px solid #000000;  /* Black border */
+  background-color: #FFFFFF;  /* White background */
+  color: #000000;  /* Black text */
   font-size: 16px;
   outline: none;
   transition: all 0.3s;
@@ -117,13 +132,19 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 4px 4px 0px var(--primary);
+  box-shadow: 4px 4px 0px #A13D3D;  /* Red shadow */
+  border-color: #A13D3D;  /* Red border on focus */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);  /* Light black placeholder */
 }
 
 select {
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000' d='M6 9L1 4h10z'/%3E%3C/svg%3E");  /* Black arrow */
   background-repeat: no-repeat;
   background-position: right 15px center;
   padding-right: 40px;
@@ -168,8 +189,8 @@ textarea {
   width: 100%;
   padding: 12px;
   background-color: var(--accent);
-  color: var(--secondary);
-  border: 2px solid var(--primary);
+  color: #FFFFFF;  /* White text on red button */
+  border: 2px solid #000000;  /* Black border */
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -179,12 +200,12 @@ textarea {
 }
 
 .submit-btn:hover {
-  box-shadow: 4px 4px 0px var(--primary);
+  box-shadow: 4px 4px 0px #000000;  /* Black shadow */
   transform: translate(-2px, -2px);
 }
 
 .submit-btn:active {
-  box-shadow: 2px 2px 0px var(--primary);
+  box-shadow: 2px 2px 0px #000000;  /* Black shadow */
   transform: translate(-1px, -1px);
 }
 
@@ -194,6 +215,8 @@ textarea {
   color: var(--primary);
   font-size: 14px;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -231,6 +254,11 @@ textarea {
     padding: 10px;
     font-size: 14px;
   }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -249,32 +277,9 @@ textarea {
   .checkbox-item {
     font-size: 14px;
   }
-}.    body.anim-dots {
-  background-image: radial-gradient(circle, var(--primary) 1px, transparent 1px);
-  background-size: 30px 30px;
-  animation: dotMove 30s linear infinite;
-}
 
-@keyframes dotMove {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 30px 30px;
-  }
-}
-.logo {
-  width: 144px;
-  height: 144px;
-  margin-bottom: 15px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 480px) {
   .logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 }
